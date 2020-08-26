@@ -6,9 +6,9 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(windowWidth, windowHeight);
   
-  lamp = createSprite(250,250,120,50);
+  lamp = createSprite(windowWidth/2,windowHeight/2,120,50);
   //lamp.addImage("lamp", lampImage);
   lamp.addImage("lamp", lampImage1);
   //lamp.setCollider("rectangle",0,0,0,0);
