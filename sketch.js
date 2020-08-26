@@ -6,8 +6,10 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  //createCanvas(500, 500);
+  //lamp = createSprite(250,250,120,50);
   
+  createCanvas(windowWidth, windowHeight);
   lamp = createSprite(windowWidth/2,windowHeight/2,120,50);
   //lamp.addImage("lamp", lampImage);
   lamp.addImage("lamp", lampImage1);
@@ -24,7 +26,8 @@ function draw() {
    l=1;
   }
   if(l==1){
-    lit = createSprite(300,190,10,10);
+    //lit = createSprite(300,190,10,10);
+    lit = createSprite((windowWidth/2)+55,(windowHeight/2)-60,10,10);
     lit.addAnimation("anim",litAnim);
     lit.scale = 0.3;
   }
