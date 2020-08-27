@@ -1,22 +1,27 @@
-var lamp,lampImage,litAnim,lit;
+var lamp,lampImage,litAnim,lit,lit2,lit3,leftImg,rightImg,leftSprite,rightSprite;
 function preload(){
-  lampImage = loadImage("Lamp.jpeg");
+  lampImage = loadImage("lamp2.jpeg");
   lampImage1 = loadImage("images.jpeg");
   litAnim = loadAnimation("edit3.png","edit4.png");
+  leftImg = loadImage("LeftSide.jpeg");
+  rightImg = loadImage("RightSide.jpeg");
 }
 
 function setup() {
-  //createCanvas(500, 500);
-  //lamp = createSprite(250,250,120,50);
-  
   createCanvas(windowWidth, windowHeight);
+  
   lamp = createSprite(windowWidth/2,windowHeight/2,120,50);
-  //lamp.addImage("lamp", lampImage);
-  lamp.addImage("lamp", lampImage1);
+  lamp.addImage("lamp", lampImage);
+  //lamp.addImage("lamp", lampImage1);
   //lamp.setCollider("rectangle",0,0,0,0);
   //lamp.debug=false;
   
-  
+  leftSprite = createSprite((windowWidth/2-150),(windowHeight/2-150),120,50);
+  leftSprite.addImage("img",leftImg);
+  leftSprite.scale = 0.2;
+  rightSprite = createSprite((windowWidth/2+160),(windowHeight/2-150),120,50);
+  rightSprite.addImage("img",rightImg);
+  rightSprite.scale = 0.1;
 }
 
 function draw() {
@@ -26,10 +31,17 @@ function draw() {
    l=1;
   }
   if(l==1){
-    //lit = createSprite(300,190,10,10);
-    lit = createSprite((windowWidth/2)+55,(windowHeight/2)-60,10,10);
+    lit = createSprite((windowWidth/2)+20,(windowHeight/2)-75,10,10);
     lit.addAnimation("anim",litAnim);
-    lit.scale = 0.3;
+    lit.scale = 0.2;
+    
+    lit2 = createSprite((windowWidth/2),(windowHeight/2)-75,10,10);
+    lit2.addAnimation("anim",litAnim);
+    lit2.scale = 0.2;
+    
+    lit3 = createSprite((windowWidth/2)-20,(windowHeight/2)-75,10,10);
+    lit3.addAnimation("anim",litAnim);
+    lit3.scale = 0.2;
   }
   drawSprites();
 }
