@@ -32,7 +32,7 @@ function setup() {
 
 function draw() {
   var l=0;
-  background("#3b0800");
+  background("white");
   if(mousePressedOver(lamp)){
    l=1;
   }
