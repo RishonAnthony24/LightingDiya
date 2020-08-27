@@ -1,10 +1,11 @@
-var lamp,lampImage,litAnim,lit,lit2,lit3,leftImg,rightImg,leftSprite,rightSprite;
+var lamp,lampImage,litAnim,lit,lit2,lit3,leftImg,rightImg,leftSprite,rightSprite,titleImg,title;
 function preload(){
   lampImage = loadImage("lamp2.jpeg");
   lampImage1 = loadImage("images.jpeg");
   litAnim = loadAnimation("edit3.png","edit4.png");
   leftImg = loadImage("LeftSide.jpeg");
   rightImg = loadImage("RightSide.jpeg");
+  titleImg = loadImage("Title.png");
 }
 
 function setup() {
@@ -22,6 +23,11 @@ function setup() {
   rightSprite = createSprite((windowWidth/2+160),(windowHeight/2-150),120,50);
   rightSprite.addImage("img",rightImg);
   rightSprite.scale = 0.1;
+  
+  title = createSprite((windowWidth/2),(windowHeight/2+200),120,50);
+   title.addImage("img",titleImg);
+  title.scale = 0.7;
+  
 }
 
 function draw() {
